@@ -1,0 +1,384 @@
+body {
+  color: #404040;
+  font: 400 15px/22px;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Basic elements */
+input {
+  position: relative;
+  z-index: 99;
+  height: auto;
+  width: auto;
+}
+#menu {
+  position: absolute;
+  background: #ffffff;
+  padding: 10px;
+  z-index: 1;
+}
+#threed {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 2em;
+  font-weight: 700;
+  top: 0px;
+  left: 145px;
+  padding: 10px;
+  width: 60px;
+  background-color: #00a1d5;
+  border-radius: 4px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.9;
+}
+#marker {
+  display: block;
+  background-image: url('../image/videotb.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 6%;
+  width: 4%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.mapboxgl-ctrl-geocoder {
+  border: 0;
+  border-radius: 0;
+  position: relative;
+  top: 0;
+  width: 800px;
+  margin-top: 0;
+}
+
+.mapboxgl-ctrl-geocoder > div {
+  min-width: 100%;
+  margin-left: 0;
+}
+
+.sidebar {
+  position: absolute;
+  width: 33.3333%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.pad2 {
+  padding: 20px;
+}
+
+.map {
+  position: absolute;
+  left: 33.3333%;
+  width: 66.6666%;
+  top: 0;
+  bottom: 0;
+}
+
+.location {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 50px 2px;
+  color: #fff;
+  text-align: center;
+  text-shadow: #000 4px 2px;
+}
+
+div.heading {
+  background-image: url(../image/vasabg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+  max-width: 100%;
+  z-index: 1;
+}
+
+a {
+  text-transform: uppercase;
+  color: #404040;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #101010;
+}
+a.title {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+}
+
+.heading {
+  min-height: 60px;
+  line-height: 60px;
+  padding: 0 10px;
+  background: #fff;
+  color: #fff;
+}
+
+.listings {
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 60px;
+}
+.thumbnail {
+  height: 70px;
+  width: 70px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  box-shadow: 2px 6px 20px black;
+}
+
+.listings .item {
+  display: block;
+  border-bottom: 1px solid #000;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.listings .item:last-child {
+  display: block;
+  border-bottom: 1px solid #000;
+  padding-bottom: 150px;
+}
+
+.listings .item .title {
+  display: block;
+  color: #000000;
+  font-weight: 700;
+}
+
+.listings .item .title small {
+  font-weight: 400;
+}
+
+.listings .item.active .title,
+.listings .item .title:hover {
+  color: #000;
+}
+
+.listings .item.active {
+  background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+  border-left: 0;
+  background: #000;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f82273;
+  border-radius: 0;
+}
+
+.marker {
+  border: none;
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+  background-image: url(../image/marker.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#buildingMarker {
+  display: block;
+  background-image: url('../image/marker.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 6%;
+  width: 4%;
+  border-radius: 20%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.button {
+  position: relative;
+  right: -70%;
+  border-radius: 4px;
+  background-color: #00a1d5;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  padding: 12px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Marker tweaks */
+.mapboxgl-popup {
+  padding-bottom: 50px;
+}
+
+.mapboxgl-popup-close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 30px;
+  border: none;
+  border-radius: 0 3px 0 0;
+  cursor: pointer;
+}
+
+.mapboxgl-popup-content {
+  font: 400 15px/22px;
+  padding: 0;
+  width: 300px;
+}
+
+.mapboxgl-popup-content-wrapper {
+  padding: 1%;
+}
+
+.mapboxgl-popup-content h3 {
+  background: #fff;
+  color: #000000;
+  margin: 0;
+  display: block;
+  padding: 5px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.mapboxgl-popup-content h4 {
+  margin: 0;
+  display: block;
+  padding: 10px 10px 10px 10px;
+  font-weight: 400;
+}
+
+.mapboxgl-popup-content div {
+  padding: 10px;
+}
+
+.mapboxgl-container .leaflet-marker-icon {
+  cursor: pointer;
+}
+
+.mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
+  border-bottom-color: #163ec2;
+}
+
+#card-img {
+  max-height: 250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card-select {
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.card-select .card-divider {
+  background-color: #f8a722;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid #cacaca;
+}
+
+.card-select .button {
+  padding: 1rem;
+  background-color: #22f8a7;
+}
+
+.card-select .button:after {
+  content: 'Select';
+}
+
+.card-select .button:hover {
+  background-color: #1779ba;
+}
+
+.card-select .button:focus {
+  background-color: #1779ba;
+}
+
+.card-select.is-selected {
+  border: 1px solid #1779ba;
+  box-shadow: 0 0 10px #e6e6e6;
+  transition: all 0.5s ease;
+}
+
+.card-select.is-selected .button {
+  background-color: #1779ba;
+}
+
+.card-select.is-selected .button:after {
+  content: 'Selected';
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000;
+}
