@@ -26,7 +26,7 @@
             "byggt": "Byggt/ombyggt: 1959/2006",
             "butik": "Butik: 6759 m²",
             "kontor": "Kontor: 7647 m²",
-            "ovrigt": ""
+            "ovrigt": "203 m²"
           }
         },
         {
@@ -110,7 +110,7 @@
             "byggt": "Bygggt/ombyggt: 1979/1995",
             "butik": "Butik: 320 m²",
             "kontor": "Kontor: 1902 m²",
-            "ovrigt": "Övrigt: 1 m²"
+            "ovrigt": "Övrigt: 10 m²"
           }
         },
         {
@@ -131,7 +131,7 @@
             "byggt": "Byggt/ombyggt: 1958/1996",
             "butik": "Butik: 5507 m²",
             "kontor": "Kontor: 8669 m²",
-            "ovrigt": ""
+            "ovrigt": "3203 m²"
           }
         },
         {
@@ -194,7 +194,7 @@
       //e();
     }
     function switchLayer(layer) {
-        var layerId = layer.target.id;
+      var layerId = layer.target.id;
         if (layerId === 'basic') {
           map.setStyle('mapbox://styles/martinfront/cjer31qodi3u42ro6j7o1m2bg')
           myFunction();
@@ -217,7 +217,6 @@
     .setLngLat(video)
     .setPopup(popup)
     .addTo(map);
-    /* End of videoframe */
 
     // This adds the data to the map
     map.on('style.load', function (e) {
